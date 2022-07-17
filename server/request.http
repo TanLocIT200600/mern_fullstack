@@ -5,3 +5,21 @@ Content-Type: application/json
   "username":"tanloc2",
   "password":"20062000"
 }
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQ0MjU1NTRmNjQxMzAwN2RhM2I2ZDAiLCJpYXQiOjE2NTgwNzAzNTd9.fkf9yXHJKBRNkduec1O_jQH0aNnleKCtpSbe9NrkqL4
+
+{
+    "title":"BÀN TAY CỦA QUỶ ",
+    "description":"Ngôi nhà gần bãi đất tha ma của ông Tư Hương có gì ma mị? Mời quý vị các bạn cùng đón nghe truyện ma Bàn Tay Của Quỷ tác giả Ngọc Ngà qua giọng đọc MC Đình Soạn. Chúc quý vị các bạn nghe truyện vui vẻ",
+    "url":"https://hemtruyenma.info/upload/pro/Ban-Tay-Cua-Quy.jpg?quality=100&mode=crop&anchor=topleft&width=450&height=675",
+    "status":"LEARNED"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQ0MjU1NTRmNjQxMzAwN2RhM2I2ZDAiLCJpYXQiOjE2NTgwNzAzNTd9.fkf9yXHJKBRNkduec1O_jQH0aNnleKCtpSbe9NrkqL4
