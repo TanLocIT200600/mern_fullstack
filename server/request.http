@@ -2,7 +2,17 @@ POST http://localhost:5000/api/auth/register
 Content-Type: application/json
 
 {
-  "username":"tanloc2",
+  "username":"tanloc22",
+  "password":"20062000"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username":"tanloc22",
   "password":"20062000"
 }
 
@@ -10,16 +20,32 @@ Content-Type: application/json
 
 POST http://localhost:5000/api/posts
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQ0MjU1NTRmNjQxMzAwN2RhM2I2ZDAiLCJpYXQiOjE2NTgwNzAzNTd9.fkf9yXHJKBRNkduec1O_jQH0aNnleKCtpSbe9NrkqL4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQ1M2IyNmNhNjQwNGRkZjllNGJmMzgiLCJpYXQiOjE2NTgxNTQ5NzN9.PxQMFSWVDYsn22jNBMMa-K48e87RojxQqpc9FnU56xs
 
 {
-    "title":"BÀN TAY CỦA QUỶ ",
-    "description":"Ngôi nhà gần bãi đất tha ma của ông Tư Hương có gì ma mị? Mời quý vị các bạn cùng đón nghe truyện ma Bàn Tay Của Quỷ tác giả Ngọc Ngà qua giọng đọc MC Đình Soạn. Chúc quý vị các bạn nghe truyện vui vẻ",
-    "url":"https://hemtruyenma.info/upload/pro/Ban-Tay-Cua-Quy.jpg?quality=100&mode=crop&anchor=topleft&width=450&height=675",
-    "status":"LEARNED"
+    "title":"ReactJS",
+    "description":"ReactJS is the frammework of facebook",
+    "url":"react.org",
+    "status":"TO LEARN"
 }
 
 ###
 
 GET http://localhost:5000/api/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQ0MjU1NTRmNjQxMzAwN2RhM2I2ZDAiLCJpYXQiOjE2NTgwNzAzNTd9.fkf9yXHJKBRNkduec1O_jQH0aNnleKCtpSbe9NrkqL4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQ1M2IyNmNhNjQwNGRkZjllNGJmMzgiLCJpYXQiOjE2NTgxNTQ5NzN9.PxQMFSWVDYsn22jNBMMa-K48e87RojxQqpc9FnU56xs
+
+###
+PUT http://localhost:5000/api/posts/62d570ec1828471d49246020
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQ1M2IyNmNhNjQwNGRkZjllNGJmMzgiLCJpYXQiOjE2NTgxNTQ5NzN9.PxQMFSWVDYsn22jNBMMa-K48e87RojxQqpc9FnU56xs
+
+{
+  "title":"ReactJS and React Native",
+  "description":"ReactJS is the frammework of facebook.They were borned in 2011",
+  "url": "react.org",
+  "status": "LEARNING"
+}
+
+###
+DELETE http://localhost:5000/api/posts/62d570ec1828471d49246020
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQ1M2IyNmNhNjQwNGRkZjllNGJmMzgiLCJpYXQiOjE2NTgxNTQ5NzN9.PxQMFSWVDYsn22jNBMMa-K48e87RojxQqpc9FnU56xs
